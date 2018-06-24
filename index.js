@@ -22,3 +22,12 @@ es = express()
 
  es.get('/lena', (req, res) => res.render('pages/lena'))
  es.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+ 
+ es.get('/times', (req, res) => {
+  let result = ''
+  const times = process.env.TIMES || 5
+  for (i = 0; i < times; i++) {
+    result += i + ' '
+  }
+  res.send(result)
+})
