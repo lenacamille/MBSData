@@ -58,7 +58,10 @@ let AsyncException = loadable({
   loader: () => import('routes/exception/'),
   loading: LoadingComponent
 })
-
+let AsyncHome = loadable({
+  loader: () => import('routes/home/'),
+  loading: LoadingComponent
+})
 
 
 class AppContent extends React.Component {
@@ -80,6 +83,7 @@ class AppContent extends React.Component {
         <Route path={`${match.url}/ui`} component={AsyncUI} />
         <Route path={`${match.url}/ui-overview`} component={AsyncUIOverview} />
         <Route path={`${match.url}/exception`} component={AsyncException} />
+        <Route path={`${match.url}/home`} component={AsyncHome} />
       </Content>
     );
   }

@@ -1,4 +1,3 @@
-// If local instance of node doesn't terminate... taskkill /F /IM node.exe
 const cool = require('cool-ascii-faces')
 const express = require('express')
 const path = require('path')
@@ -11,10 +10,17 @@ setInterval(() => server.getConnections(
 ), 5000);
 
 //es.use(express.static(path.join(__dirname, 'public')))
-//es.use(express.static(path.join(path.join(__dirname, 'ant'), 'public')))
-es.use(express.static(path.join(__dirname,'build')))
+es.use(express.static(path.join(path.join(__dirname, 'ant'), 'build')))
+// es.use(express.static(path.join(__dirname,'build')))
 es.get('/', (req, res) => res.render('/index.html'))
 
+
+// Database Connection
+const { Pool } = require('pg');
+const pool = new Pool({
+connectionString: process.env.DATABASE_URL,
+ssl: true
+});
 
 
 // es.set('views', path.join(__dirname, 'views'))
@@ -54,12 +60,7 @@ es.get('/', (req, res) => res.render('/index.html'))
 // res.send(result)
 // })
 
-//database stuff:
-// const { Pool } = require('pg');
-// const pool = new Pool({
-// connectionString: process.env.DATABASE_URL,
-// ssl: true
-// });
+
 
 // es.get('/db', async (req, res) => {
 // try {

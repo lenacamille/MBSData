@@ -5,7 +5,7 @@ const APPCONFIG = {
   brand: 'Ant',
   year: year,
   AutoCloseMobileNav: true,           // Boolean: true, false. Automatically close sidenav on route change (Mobile only)
-  customizer: true,                   // Boolean: true, false. Customizer will be removed completely when set to false
+  customizer: false,                   // Boolean: true, false. Customizer will be removed completely when set to false
   showCustomizer: false,              // Boolean: true, false. Customizer will be opened (visible) first time app was loaded if set to true
   color: {
     primary:  '#1890ff',
@@ -18,15 +18,15 @@ const APPCONFIG = {
     gray:     '#EDF0F1'
   },
   settings: {
-    layout: '1',                      // String: 1, 2, 3, 4 and add your own
-    boxedLayout: false,               // Boolean: true, false
+    layout: '4',                      // String: 1, 2, 3, 4 and add your own
+    boxedLayout: true,               // Boolean: true, false
     fixedSidenav: false,              // Boolean: true, false
-    fixedHeader: false,               // Boolean: true, false
+    fixedHeader: true,               // Boolean: true, false
     collapsedNav: false,              // Boolean: true, false
     offCanvasNav: false,              // Boolean: true, false
     sidenavWidth: 240,                // Number
     offCanvasMobileNav: true,         // Boolean: true, false. Mobile only, by default, it's true (off canvas)
-    colorOption: '34',                // String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
+    colorOption: '11',                //34 String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
     theme: 'light',                   // (WIP) String: light, gray, dark
   }
 }

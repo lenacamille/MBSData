@@ -18,7 +18,7 @@ let sortedComponents = COMPONENTS.sort(compare).filter(el => !el.children);
 
 const Cover = () => (
   <section className="cover">
-    <div className="cover-bg-img d-none d-md-block" style={{backgroundImage: 'url(assets/images-demo/covers/leone-venter-559377-cut.jpg)'}}></div>
+    <div className="cover-bg-img d-none d-md-block" style={{backgroundImage: 'url(assets/hans-peter-gauster-252751-unsplash.jpg)'}}></div>
     <div className="container-fluid container-mw-xl">
       <div className="row">
         <div className="col-md-6 col-lg-5">
