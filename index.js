@@ -12,7 +12,7 @@ setInterval(() => server.getConnections(
 //es.use(express.static(path.join(__dirname, 'public')))
 es.use(express.static(path.join(path.join(__dirname, 'ant'), 'build')))
 // es.use(express.static(path.join(__dirname,'build')))
-es.get('/', (req, res) => res.render('/index.html'))
+// es.get('/', (req, res) => res.render('/index.html'))
 
 // Database Connection
 const { Pool } = require('pg');
@@ -25,9 +25,9 @@ ssl: true
 // es.set('views', path.join(__dirname, 'views'))
 // es.set('view engine', 'ejs') 
 
-// es.get('/ant', (req, res) => {
-// 	res.sendFile('index.html', {root: path.join(__dirname,'ant','public')});
-// })
+es.get('/ant', (req, res) => {
+	res.sendFile('/index.html');
+})
 
 
 
