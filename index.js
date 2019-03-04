@@ -12,13 +12,7 @@ setInterval(() => server.getConnections(
 //es.use(express.static(path.join(__dirname, 'public')))
 es.use(express.static(path.join(path.join(__dirname, 'ant'), 'build')))
 // es.use(express.static(path.join(__dirname,'build')))
-// es.get('/', (req, res) => res.render('/index.html'))
-
-es.set('views', path.join(path.join(__dirname, 'ant'), 'build'));
-es.engine('html', require('ejs').renderFile);
-es.set('view engine', 'html');
-es.listen(es.get('port'), function() {
-});
+es.get('/', (req, res) => res.render('/index.html'))
 
 // Database Connection
 const { Pool } = require('pg');
