@@ -10,7 +10,8 @@ setInterval(() => server.getConnections(
 ), 5000);
 
 //es.use(express.static(path.join(__dirname, 'public')))
-es.engine('html', require('ejs').renderFile);
+// es.engine('html', require('ejs').renderFile);
+es.set('view engine', 'ejs');
 es.use(express.static(path.join(path.join(__dirname, 'ant'), 'build')))
 // es.use(express.static(path.join(__dirname,'build')))
 es.get('/', (req, res) => res.render('/index.html'))
