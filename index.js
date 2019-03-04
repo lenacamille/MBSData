@@ -17,7 +17,7 @@ es.use(express.static(path.join(path.join(__dirname, 'ant'), 'build')))
 es.set('views', path.join(path.join(__dirname, 'ant'), 'build'));
 es.engine('html', require('ejs').renderFile);
 es.set('view engine', 'html');
-es.listen(app.get('port'), function() {
+es.listen(es.get('port'), function() {
 });
 
 // Database Connection
