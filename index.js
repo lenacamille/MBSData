@@ -25,7 +25,7 @@ ssl: true
 // es.set('views', path.join(__dirname, 'views'))
 // es.set('view engine', 'ejs') 
 
-es.get('/ant', (req, res) => {
+es.get('/', (req, res) => {
 	res.sendFile('index.html');
 })
 
